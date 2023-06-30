@@ -45,6 +45,8 @@ public class NetworkRunnerHandeler : MonoBehaviour,INetworkRunnerCallbacks
     {
         
         var sceneManager = runner.GetComponent<NetworkSceneManagerDefault>();
+        var playerCount = runner.SessionInfo.PlayerCount;
+        
         //TODO - Check if theres 2 players conected to the session before starting the game
         var result = await runner.StartGame(new StartGameArgs
         {
@@ -62,7 +64,8 @@ public class NetworkRunnerHandeler : MonoBehaviour,INetworkRunnerCallbacks
        }
        else
        {
-           Debug.Log("[Custom Msg] Game Started");
+         
+          // Debug.Log("[Custom Msg] Game Started");
        }
     }
     #endregion

@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb84e2ed938c1ea4bbd872c187b44b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stateHandeler:
+    RawGuidValue: f30a3df6d1a12c14ca83e80050eaa75f
+  StateHandeler: {fileID: 0}
   PlayersSpawnPoints:
   - {fileID: 7726803043307620615, guid: 608993c6c97e3914f9adfcfd7698ddcd, type: 3}
   - {fileID: 5998655882744249652, guid: 6a8695796cef1bb4eaa6250f49ab3379, type: 3}

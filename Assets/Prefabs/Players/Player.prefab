@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   _cc: {fileID: 0}
-  _camera: {fileID: 0}
+  _camera: {fileID: 2409154743219491625, guid: f82e6404ffb5530408f5f733d162452f, type: 3}
   _bullet: {fileID: 8891954931450711212, guid: 0154f127927342c4bbbe7972d77e6cf5, type: 3}
   speed: 5
 --- !u!114 &1650341186315920293

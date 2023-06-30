@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerTest : NetworkBehaviour
 {
     [SerializeField] private NetworkCharacterControllerPrototype _cc;
-    [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject _camera;
     [SerializeField] private NetworkBullet _bullet;
     private Vector3 _forward;
     [Networked] private TickTimer _delay { get; set;}
@@ -21,8 +21,11 @@ public class PlayerTest : NetworkBehaviour
 
     public override void Spawned()
     {
-        _camera = Camera.main;
-        _camera.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
+        var cam= Instantiate(_camera, transform.position, quaternion.identity);
+        cam.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
+        
+        //_camera = Camera.main;
+        //_camera.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
     }
 
     public override void FixedUpdateNetwork()
