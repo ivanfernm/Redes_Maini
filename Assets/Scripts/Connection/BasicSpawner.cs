@@ -78,42 +78,35 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 
 
         playerRunners.Add((player, runner));
+        Debug.Log(playerRunners.Count);
 
-        if (playerRunners.Count >= 1)
+        
+        if (runner.IsServer)
         {
-            foreach (var p in playerRunners)
-            {
-                if (p.runner.IsServer)
-                {
-                    // Create a unique position for the player
-                    var playerIndex = Random.Range(0, PlayersSpawnPoints.Count);
-                    Vector3 spawnPosition = PlayersSpawnPoints[playerIndex].position;
-                    //new Vector3((player.RawEncoded % runner.Config.Simulation.DefaultPlayers) * 3, 1, 0);
-                    NetworkObject networkPlayerObject =
-                        runner.Spawn(_playerPrefab, spawnPosition, Quaternion.identity, player);
-                    // Keep track of the player avatars so we can remove it when they disconnect
-                    _spawnedCharacters.Add(player, networkPlayerObject);
-                    //Remove player index from the list
-                    PlayersSpawnPoints.RemoveAt(playerIndex);
+            // Create a unique position for the player
+            var playerIndex = Random.Range(0, PlayersSpawnPoints.Count);
+            Vector3 spawnPosition = PlayersSpawnPoints[playerIndex].position;
+            //new Vector3((player.RawEncoded % runner.Config.Simulation.DefaultPlayers) * 3, 1, 0);
+            NetworkObject networkPlayerObject =
+                runner.Spawn(_playerPrefab, spawnPosition, Quaternion.identity, player);
+            // Keep track of the player avatars so we can remove it when they disconnect
+            _spawnedCharacters.Add(player, networkPlayerObject);
+            //Remove player index from the list
+            PlayersSpawnPoints.RemoveAt(playerIndex);
                     
-                    var stateHandeler = runner.Spawn(_stateHandeler, Vector3.zero, Quaternion.identity, player);
-                    StateHandeler = stateHandeler.GetComponent<GameStateHandeler>();
-                }
-                else
-                {
-                    Debug.Log("Joining as client");
-                }
-            }
-            
-            if (playerRunners.Count >= 2)
-            {
-                StartCoroutine(StateHandeler.GameStarting());
-            }
+            var stateHandeler = runner.Spawn(_stateHandeler, Vector3.zero, Quaternion.identity, player);
+            StateHandeler = stateHandeler.GetComponent<GameStateHandeler>();
         }
         else
         {
-            Debug.LogError("Waiting For Players");
+            Debug.Log("Joining as client");
         }
+
+        if (playerRunners.Count >= 2)
+        {
+            StateHandeler.Starting();
+        }
+  
         
         
         // cuando se une el player debugear esperando por player  y una vez que haya mas de 1 se spawnean

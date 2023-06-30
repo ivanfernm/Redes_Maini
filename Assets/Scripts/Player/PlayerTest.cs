@@ -21,15 +21,25 @@ public class PlayerTest : NetworkBehaviour
 
     public override void Spawned()
     {
-        var cam= Instantiate(_camera, transform.position, quaternion.identity);
-        cam.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
-        
+
+        if (Camera.main != null)
+        {
+            _camera = Camera.main.gameObject;
+            _camera.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
+            
+        }
+        else
+        {
+            var cam= Instantiate(_camera, transform.position, quaternion.identity);
+            _camera = cam;
+            cam.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
+        }
         //_camera = Camera.main;
-        //_camera.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
     }
 
     public override void FixedUpdateNetwork()
     {
+
         if (GetInput(out NetworkInputData data))
         {
             data.direction.Normalize();

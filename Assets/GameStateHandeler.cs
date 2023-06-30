@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameStateHandeler : NetworkBehaviour
 {
+    public static GameStateHandeler Instance { get; private set; }
     enum GameState
     {
         Starting,
@@ -29,8 +30,21 @@ public class GameStateHandeler : NetworkBehaviour
     {
         if (Object.HasStateAuthority == false) return;
         
+        if (Instance != null)
+        {
+            return;
+        }
+        else
+        {
+          Instance = this;
+        }
         _gameState = GameState.Starting;
         _timer = TickTimer.CreateFromSeconds(Runner, _gameSessionLenth);
+
+        CanvasHandeler = GetComponentInChildren<MainCanvasHandeler>();
+        CanvasHandeler._RestartBTN.onClick.AddListener(Ending);
+        CanvasHandeler._ExitBTN.onClick.AddListener(Ending);
+        
     }
 
     public override void FixedUpdateNetwork()
@@ -53,11 +67,27 @@ public class GameStateHandeler : NetworkBehaviour
         }
     }
 
+    public void Starting()
+    {
+        StartCoroutine(GameStarting());
+    }
+
     public IEnumerator GameStarting()
     {
         _gameState = GameState.Starting;
-        yield return new WaitForSeconds(5);
+        Debug.Log(" Game Starting");
+        yield return new WaitForSeconds(.5f);
         _gameState = GameState.Running;
+    }
+    
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    
+    public void Ending()
+    {
+        StartCoroutine(GameEnding());
     }
     
     public IEnumerator GameEnding()

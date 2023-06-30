@@ -211,6 +211,7 @@ MonoBehaviour:
   _gameSessionLenth: 180
   _inGameTimerDisplay: {fileID: 0}
   StateText: {fileID: 4879123910671234114}
+  CanvasHandeler: {fileID: 4879123911707737079}
 --- !u!114 &4879123910682421405
 MonoBehaviour:
   m_ObjectHideFlags: 0
