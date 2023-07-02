@@ -35,7 +35,11 @@ public class PlayerTest : NetworkBehaviour
                 _camera = cam;
                 cam.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
             }
+            
+           // GameStateHandeler.Instance.playerSpawned();
         }
+
+    
 
         //_camera = Camera.main;
     }
@@ -60,4 +64,5 @@ public class PlayerTest : NetworkBehaviour
             }
         }
     }
+
 }

@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71663eb-01c2-4e6f-9227-285e622034e7" name="Changes" comment="" />
+    <list default="true" id="c71663eb-01c2-4e6f-9227-285e622034e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fc918659-a54c-4105-9433-eb0e38fbf351" />
+        <option name="url" value="https://github.com/ivanfernm/Redes_Maini.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/GameStateHandeler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scripts/Connection/BasicSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scripts/Player/PlayerTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Redes_Maini_clone_0/Assets/GameStateHandeler.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2RtkIxQbaP1GE3UE8RrsgRnrGJ0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,13 +51,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\ivanf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\ivanf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\ivanf\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -36,6 +70,14 @@
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\ivanf\OneDrive\Documentos\Proyectos Unity\Redes_Maini&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\ivanf\OneDrive\Documentos\Proyectos Unity\Redes_Maini" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\PC\Documents\Github\Redes_Maini -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\PC\Documents\Github\Redes_Maini" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -80,15 +122,41 @@
       <workItem from="1688076698688" duration="7955000" />
       <workItem from="1688124608807" duration="2726000" />
       <workItem from="1688127544800" duration="854000" />
+      <workItem from="1688306595111" duration="574000" />
+      <workItem from="1688307696306" duration="494000" />
+      <workItem from="1688325882732" duration="6208000" />
     </task>
+    <task id="LOCAL-00001" summary="Camera Change">
+      <option name="closed" value="true" />
+      <created>1688326377997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688326377997</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Camera Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera Change" />
   </component>
 </project>
