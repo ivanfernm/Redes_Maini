@@ -9,8 +9,9 @@ public class MainCanvasHandeler : NetworkBehaviour
 {
     [Header("Panels")] [SerializeField] private GameObject _WinPannel;
     [SerializeField] private GameObject _LosePannel;
-    
-   public static MainCanvasHandeler Instance { get; private set; }
+    [SerializeField] private Text _TimerText;
+
+    public static MainCanvasHandeler Instance { get; private set; }
 
     [Header("Buttons")] [SerializeField] public Button _RestartBTN;
     [SerializeField] public Button _ExitBTN;
@@ -23,7 +24,19 @@ public class MainCanvasHandeler : NetworkBehaviour
         }
         else
         {
-          Instance = this;
+            Instance = this;
+        }
+    }
+
+    public override void FixedUpdateNetwork()
+    {
+        if (GameStateHandeler.Instance.GetGameState() == GameStateHandeler.GameState.Running)
+        {
+            _TimerText.text = TimeObjective.Instance._timeToWin.ToString("F0");
+        }
+        else
+        {
+            _TimerText.text = "0";
         }
     }
 

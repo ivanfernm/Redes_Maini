@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using Fusion;
 using Fusion.Sockets;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
@@ -12,7 +14,7 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     private NetworkRunner _runner;
 
     [SerializeField] private NetworkPrefabRef _stateHandeler;
-    [SerializeField] private GameStateHandeler StateHandeler;
+    [Networked] public GameStateHandeler StateHandeler { get; set;}
   
     [SerializeField] private List<Transform> PlayersSpawnPoints;
 
@@ -42,15 +44,16 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
             _spawnedCharacters.Add(player, networkPlayerObject);
             //Remove player index from the list
             PlayersSpawnPoints.RemoveAt(playerIndex);
-
-
+            
         }
         else
         {
             Debug.Log("Joining as client");
+            
+            //StateHandeler = GameStateHandeler.Instance;
         }
         
-        GameStateHandeler.Instance.PlayerJoint();
+         //GameStateHandeler.Instance.PlayerJoint();
     }
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)

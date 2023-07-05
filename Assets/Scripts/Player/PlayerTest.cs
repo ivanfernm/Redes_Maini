@@ -10,6 +10,8 @@ public class PlayerTest : NetworkBehaviour
     [SerializeField] private NetworkCharacterControllerPrototype _cc;
     [SerializeField] private GameObject _camera;
     [SerializeField] private NetworkBullet _bullet;
+    [SerializeField] private NetworkMecanimAnimator _netAnim;
+
     private Vector3 _forward;
     [Networked] private TickTimer _delay { get; set; }
 
@@ -35,34 +37,45 @@ public class PlayerTest : NetworkBehaviour
                 _camera = cam;
                 cam.GetComponent<ThirdPersonCamera>()._targer = gameObject.transform;
             }
-            
-           // GameStateHandeler.Instance.playerSpawned();
+
+            // GameStateHandeler.Instance.playerSpawned();
         }
 
-    
 
         //_camera = Camera.main;
     }
 
     public override void FixedUpdateNetwork()
     {
-        if (GetInput(out NetworkInputData data))
+        if (GameStateHandeler.Instance.GetGameState() == GameStateHandeler.GameState.Running)
         {
-            data.direction.Normalize();
-            _cc.Move(5 * data.direction * (speed * Runner.DeltaTime));
-
-            if (data.direction.sqrMagnitude > 0) _forward = data.direction;
-
-            if (_delay.ExpiredOrNotRunning(Runner))
+            if (GetInput(out NetworkInputData data))
             {
-                if ((data.buttons & NetworkInputData.MOUSEBUTTON) != 0)
+                
+                data.direction.Normalize();
+                _cc.Move(5 * data.direction * (speed * Runner.DeltaTime));
+
+                if (data.direction.sqrMagnitude > 0)
                 {
-                    _delay = TickTimer.CreateFromSeconds(Runner, 0.5f);
-                    Runner.Spawn(_bullet, transform.position + _forward, Quaternion.LookRotation(_forward),
-                        Object.InputAuthority, (Runner, o) => { o.GetComponent<NetworkBullet>().Init(); });
+                    _forward = data.direction;
+                    _netAnim.Animator.SetBool("IsMoving", true);
+                }
+                else
+                {
+                    _netAnim.Animator.SetBool("IsMoving", false);
+                }
+
+
+                if (_delay.ExpiredOrNotRunning(Runner))
+                {
+                    if ((data.buttons & NetworkInputData.MOUSEBUTTON) != 0)
+                    {
+                        _delay = TickTimer.CreateFromSeconds(Runner, 0.5f);
+                        Runner.Spawn(_bullet, transform.position + _forward, Quaternion.LookRotation(_forward),
+                            Object.InputAuthority, (Runner, o) => { o.GetComponent<NetworkBullet>().Init(); });
+                    }
                 }
             }
         }
     }
-
 }

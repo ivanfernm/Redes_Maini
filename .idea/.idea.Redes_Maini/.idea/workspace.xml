@@ -5,22 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c71663eb-01c2-4e6f-9227-285e622034e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Iobjective.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Iobjective.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Connection/GameStateHandeler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Connection/GameStateHandeler.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/ReachObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/ReachObjective.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/TimeObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/TimeObjective.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainCanvasHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainCanvasHandeler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -51,6 +62,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -125,6 +137,12 @@
       <workItem from="1688306595111" duration="574000" />
       <workItem from="1688307696306" duration="494000" />
       <workItem from="1688325882732" duration="6208000" />
+      <workItem from="1688333307998" duration="1624000" />
+      <workItem from="1688406695907" duration="7221000" />
+      <workItem from="1688480657100" duration="1441000" />
+      <workItem from="1688508614436" duration="466000" />
+      <workItem from="1688509198902" duration="788000" />
+      <workItem from="1688510775841" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="Camera Change">
       <option name="closed" value="true" />

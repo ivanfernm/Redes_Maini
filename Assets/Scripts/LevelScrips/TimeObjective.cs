@@ -13,30 +13,44 @@ public class TimeObjective : NetworkBehaviour
 
     //Must have the canvas with the panels and the buttons to restart and exit the game.
 
+    public static TimeObjective Instance;
 
-    [SerializeField] private float _timeToWin;
-    [SerializeField] private float _TimePass;
+    [Networked] public float _timeToWin { get; set; }
+    [Networked] private float _TimePass {get; set; }
+    
+   //[Networked] public TickTimer _timer { get; set; }
 
     [SerializeField] public MainCanvasHandeler _menuHandeler;
 
-    private void Start()
+    private void Awake()
     {
+        Instance = this;
+    }
+    public void StartTimer()
+    {
+       _TimePass = 0;
     }
 
-    private void Update()
+    public override void FixedUpdateNetwork()
     {
-        if (_TimePass >= _timeToWin)
+        if (GameStateHandeler.Instance.GetGameState() == GameStateHandeler.GameState.Running)
         {
-            SessionLost();
+            var a  = _TimePass += Runner.DeltaTime;
+
+            _timeToWin = _timeToWin - a;
+            
+            if ( _timeToWin <= 0)
+            {
+                
+                GameStateHandeler.Instance.Ending(GameStateHandeler.GameResult.Lose);
+                
+            }
+            
+        }
+        else
+        {
+            return;
         }
     }
-
-    void SessionLost()
-    {
-        _menuHandeler.ShowLosePanel();  
-    }
-
-    public void StopTimer()
-    {
-    }
+    
 }
