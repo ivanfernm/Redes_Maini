@@ -30,6 +30,7 @@ public class TimeObjective : NetworkBehaviour
     {
        _TimePass = 0;
     }
+    //madndar un rpc desde state del handeler a tdos
 
     public override void FixedUpdateNetwork()
     {

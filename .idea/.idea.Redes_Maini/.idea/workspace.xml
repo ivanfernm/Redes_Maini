@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c71663eb-01c2-4e6f-9227-285e622034e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Iobjective.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Iobjective.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Redes_Maini/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameStateHandeler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Connection/GameStateHandeler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Connection/GameStateHandeler.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Connection/BasicSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Connection/NetworkRunnerHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Connection/NetworkRunnerHandeler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/ReachObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/ReachObjective.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/TimeObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelScrips/TimeObjective.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainCanvasHandeler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainCanvasHandeler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +36,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/GameStateHandeler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scripts/Connection/BasicSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/Github/Redes_Maini/Assets/Scripts/Player/PlayerTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CheetCode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Redes_Maini_clone_0/Assets/GameStateHandeler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/UnityProyects/RedesGame/Assets/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://D:/UnityProyects/RedesGame/Assets/Scripts/Bullet/SimpleBullet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/UnityProyects/RedesGame/Assets/Scripts/GameStateHandeler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,6 +73,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:/UnityProyects/TestBuilds\Redes Partes 2.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\UnityProyects\TestBuilds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\ivanf\OneDrive\Documentos\Proyectos Unity\Redes_Maini&quot; -debugCodeOptimization" />
@@ -143,6 +146,10 @@
       <workItem from="1688508614436" duration="466000" />
       <workItem from="1688509198902" duration="788000" />
       <workItem from="1688510775841" duration="5000" />
+      <workItem from="1688686791544" duration="536000" />
+      <workItem from="1688761467344" duration="617000" />
+      <workItem from="1688762444023" duration="2153000" />
+      <workItem from="1688777068279" duration="6489000" />
     </task>
     <task id="LOCAL-00001" summary="Camera Change">
       <option name="closed" value="true" />

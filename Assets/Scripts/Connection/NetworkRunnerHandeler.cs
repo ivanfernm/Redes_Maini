@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Fusion;
 using Fusion.Sockets;
-using OpenCover.Framework.Model;
 using UnityEngine.SceneManagement;
 
 public class NetworkRunnerHandeler : MonoBehaviour,INetworkRunnerCallbacks

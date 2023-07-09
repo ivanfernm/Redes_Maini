@@ -49,4 +49,10 @@ public class MainCanvasHandeler : NetworkBehaviour
     {
         _LosePannel.SetActive(true);
     }
+
+    public void quit()
+    {
+        Runner.Shutdown();
+        Application.Quit();
+    }
 }

@@ -8,15 +8,21 @@ public class ReachObjective : NetworkBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        if (Object.HasStateAuthority == false) return;
+        
         var col = other.gameObject.GetComponent<PlayerTest>();
 
         if (col != null)
         {
-            if (col.Object.HasInputAuthority)
-            {
-               GameStateHandeler.Instance.Ending(GameStateHandeler.GameResult.Win);
-            }
+                RPC_EndGame();
         }
  
+    }
+    
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_EndGame()
+    {
+        var a = FindObjectOfType<GameStateHandeler>();
+        a.RPC_WinGame();
     }
 }

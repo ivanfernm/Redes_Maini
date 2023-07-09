@@ -1,12 +1,7 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Fusion;
-using Fusion.Sockets;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameStateHandeler : NetworkBehaviour
@@ -32,6 +27,7 @@ public class GameStateHandeler : NetworkBehaviour
     [Networked] private GameState _gameState { get; set; }
 
     [SerializeField] private Text StateText;
+    [Networked] public GameResult _gameResult { get; set; }
     [SerializeField] private MainCanvasHandeler CanvasHandeler;
     [SerializeField] private GameObject _WaitingPanel;
 
@@ -45,7 +41,6 @@ public class GameStateHandeler : NetworkBehaviour
         //Instance = this;
 
         CanvasHandeler = GetComponentInChildren<MainCanvasHandeler>();
-
     }
 
     public GameState GetGameState()
@@ -104,6 +99,14 @@ public class GameStateHandeler : NetworkBehaviour
         StartCoroutine(GameStarting());
     }
 
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void RPC_WinGame()
+    {
+        if (Object.HasStateAuthority == false) return;
+
+        Ending(GameResult.Win);
+    }
+
     public IEnumerator GameStarting()
     {
         _gameState = GameState.Starting;
@@ -133,6 +136,7 @@ public class GameStateHandeler : NetworkBehaviour
         {
             CanvasHandeler.ShowLosePanel();
         }
+
         yield return new WaitForSeconds(5f);
     }
 
